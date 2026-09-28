@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <title>MR BLACK DO CORTE | Agendamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="link-agendar" href="#agendamento">Agendar horário</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-conteudo">
+        <p class="sobretitulo">ESTILO • PRESENÇA • ATITUDE</p>
+        <h1>Seu próximo corte<br>começa <span>aqui.</span></h1>
+        <p class="hero-texto">
+          Escolha seus serviços e reserve seu horário na
+          <strong>MR BLACK DO CORTE</strong>.
+        </p>
+        <a class="botao" href="#agendamento">Marcar meu horário <span>↘</span></a>
+      </div>
+
+      <img
+        class="hero-logo"
+        src="blackdocorte.png"
+        alt="blackdocorte"
+        >
+        
+    </section>
+
+    <section class="servicos secao" id="servicos">
+      <div class="cabecalho-secao">
+        <p class="sobretitulo">NOSSO MENU</p>
+        <h2>Serviços e preços</h2>
+        <p>Escolha um ou mais serviços para seu próximo visual.</p>
+      </div>
+
+      <div class="grade-servicos">
+        <article class="cartao-servico"><span>Corte + Luzes</span><strong>R$ 150</strong></article>
+        <article class="cartao-servico"><span>Corte navalhado</span><strong>R$ 45</strong></article>
+        <article class="cartao-servico"><span>Corte + platinado</span><strong>R$ 170</strong></article>
+        <article class="cartao-servico"><span>Corte degradê</span><strong>R$ 40</strong></article>
+        <article class="cartao-servico"><span>Barba</span><strong>R$ 25</strong></article>
+        <article class="cartao-servico"><span>Corte degradê + barba</span><strong>R$ 60</strong></article>
+        <article class="cartao-servico"><span>Corte social</span><strong>R$ 35</strong></article>
+        <article class="cartao-servico"><span>Sobrancelha</span><strong>R$ 15</strong></article>
+        <article class="cartao-servico"><span>Degradê com pigmentação no pezinho</span><strong>R$ 55</strong></article>
+        <article class="cartao-servico"><span>Corte com reflexo alinhado</span><strong>R$ 170</strong></article>
+      </div>
+    </section>
+
+    <section class="agendamento secao" id="agendamento">
+      <div class="cabecalho-secao">
+        <p class="sobretitulo">RESERVE SEU HORÁRIO</p>
+        <h2>Vamos marcar?</h2>
+        <p>Preencha os campos e selecione pelo menos um serviço.</p>
+      </div>
+
+      <form class="formulario" id="formulario-agendamento">
+        <div class="campo campo-largo">
+          <label for="nome">Seu nome</label>
+          <input id="nome" name="nome" type="text" placeholder="Como podemos chamar você?" required>
+        </div>
+
+        <fieldset class="campo campo-largo escolha-servicos">
+          <legend>Escolha seu(s) serviço(s) <span>*</span></legend>
+          <p class="ajuda">Selecione pelo menos uma opção.</p>
+
+          <div class="opcoes-servicos">
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte + Luzes — R$ 150"><span>Corte + Luzes <b>R$ 150</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte navalhado — R$ 45"><span>Corte navalhado <b>R$ 45</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte + platinado — R$ 170"><span>Corte + platinado <b>R$ 170</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte degradê — R$ 40"><span>Corte degradê <b>R$ 40</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Barba — R$ 25"><span>Barba <b>R$ 25</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte degradê + barba — R$ 60"><span>Corte degradê + barba <b>R$ 60</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte social — R$ 35"><span>Corte social <b>R$ 35</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Sobrancelha — R$ 15"><span>Sobrancelha <b>R$ 15</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Degradê com pigmentação no pezinho — R$ 55"><span>Degradê com pigmentação no pezinho <b>R$ 55</b></span></label>
+            <label class="opcao"><input type="checkbox" name="servicos" value="Corte com reflexo alinhado — R$ 170"><span>Corte com reflexo alinhado <b>R$ 170</b></span></label>
+          </div>
+        </fieldset>
+
+        <div class="campo" id="campo-dia">
+          <label for="dia">Dia do corte</label>
+          <input id="dia" name="dia" type="date" required>
+        </div>
+
+        <div class="campo" id="campo-horario">
+          <label for="horario">Horário disponível</label>
+          <select id="horario" name="horario" required>
+            <option value="" disabled selected>Escolha um horário</option>
+            <optgroup label="Manhã">
+              <option value="10:00">10:00</option>
+              <option value="10:45">10:45</option>
+              <option value="11:15">11:15</option>
+            </optgroup>
+            <optgroup label="Tarde">
+              <option value="14:00">14:00</option>
+              <option value="14:45">14:45</option>
+              <option value="15:30">15:30</option>
+              <option value="16:15">16:15</option>
+              <option value="17:45">17:45</option>
+            </optgroup>
+            <optgroup label="Noite">
+              <option value="18:30">18:30</option>
+              <option value="19:15">19:15</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="campo campo-largo">
+          <label for="observacoes">Observações <span>(opcional)</span></label>
+          <textarea id="observacoes" name="observacoes" rows="3" placeholder="Quer deixar algum recado?"></textarea>
+        </div>
+
+        <button class="botao botao-enviar" type="submit">
+          Solicitar agendamento <span>↗</span>
+        </button>
+
+        <p class="nota-form">O envio mostra uma confirmação neste navegador.</p>
+
+        <p id="mensagem-confirmacao" class="mensagem-confirmacao" role="status" hidden>
+          Horário agendado! Obrigado por escolher a MR BLACK DO CORTE.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>MR BLACK DO CORTE — Seu estilo, do seu jeito.</p>
+  </footer>
+
+  <script>
+    const formulario = document.querySelector("#formulario-agendamento");
+    const servicos = document.querySelectorAll('input[name="servicos"]');
+    const mensagem = document.querySelector("#mensagem-confirmacao");
+    const botaoEnviar = formulario.querySelector(".botao-enviar");
+    const campoDia = document.querySelector("#dia");
+
+    const hoje = new Date();
+    const dataLocal = new Date(hoje.getTime() - hoje.getTimezoneOffset() * 60000)
+      .toISOString()
+      .split("T")[0];
+
+    campoDia.min = dataLocal;
+
+    formulario.addEventListener("submit", (evento) => {
+      evento.preventDefault();
+
+      const algumSelecionado = [...servicos].some((servico) => servico.checked);
+
+      if (!algumSelecionado) {
+        alert("Escolha pelo menos um serviço para continuar.");
+        return;
+      }
+
+      document.querySelector("#campo-dia").hidden = true;
+      document.querySelector("#campo-horario").hidden = true;
+      botaoEnviar.hidden = true;
+      mensagem.hidden = false;
+      mensagem.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  </script>
+</body>
+</html>
